@@ -4,6 +4,7 @@ class Classroom
     @subject = subject
     @capacity = capacity
     @students = []
+    @upcase_names = []
 
   end
 
@@ -11,9 +12,10 @@ class Classroom
     @students << student
   end
 
+
   def yell_at_students
-     @students.each do |student|
-       student.upcase
+    @students.each do |student|
+      @upcase_names << student.upcase
      end
   end
 
@@ -25,5 +27,10 @@ class Classroom
     end
   end
 
-  def
+  def kick_out
+    if @students.count > 4
+      @students.delete_at(1)
+    end
+  end
+
 end
