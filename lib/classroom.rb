@@ -22,6 +22,8 @@ class Classroom
     @students.count >= 4
   end
 
-  
+  def kick_out
+    @students.shift
+  end
 
 end
