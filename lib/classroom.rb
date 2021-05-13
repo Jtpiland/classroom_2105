@@ -18,6 +18,10 @@ class Classroom
     all_caps_student
   end
 
+  def over_capacity?
+    @students.count >= 4
+  end
 
+  
 
 end
